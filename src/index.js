@@ -14,6 +14,7 @@ function App() {
         onChange={() => SetChecked((checked) => !checked)}
       />
       <p>{checked ? "checked" : "not checked"}</p>
+  </div>
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
