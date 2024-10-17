@@ -1,18 +1,19 @@
-import React, { useState } from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
+import React, { useState} from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
 
-//useState
+//useState with checkbox
 function App() {
-  const [status, setStatus] = useState("Himasha");
+  const [checked, SetChecked] = useState(false);
 
   return (
     <div>
-      <h1>The name is : {status}</h1>
-      <button onClick={() => setStatus("Delivered")}>Deliver</button>
-    </div>
-  );
-}
+      <input
+        type="checkbox"
+        value={checked}
+        onChange={() => SetChecked((checked) => !checked)}
+      />
+      <p>{checked ? "checked" : "not checked"}</p>
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
