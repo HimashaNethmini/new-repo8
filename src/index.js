@@ -5,7 +5,7 @@ import "./index.css";
 function App() {
   const [name, setName] = useState('Himasha');
 
-  //change document name with useEffect
+  //change the document name with useEffect
   useEffect (() => {
     document.title = `Celebrate ${name}`;
   })
