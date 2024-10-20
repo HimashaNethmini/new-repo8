@@ -10,6 +10,7 @@ function App() {
     <h1 onClick={()=>setNumber(1)}>{number}</h1>
   )
 }
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
