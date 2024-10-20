@@ -1,25 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, {  useReducer } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
 function App() {
-  const [name, setName] = useState('Himasha');
-
-  //change the document name with useEffect
-  useEffect (() => {
-    document.title = `Celebrate ${name}`;
-  })
-
+  const [number, setNumber] = useReducer (
+    (number, newNumber) => number + newNumber, 0
+  );
   return (
-    <section>
-      <h1>Congratulations {name} !</h1>
-      <button onClick={()=> setName("Nethmini")}>
-        Winner
-      </button>
-    </section>
+    <h1 onClick={()=>setNumber(1)}>{number}</h1>
   )
 }
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
